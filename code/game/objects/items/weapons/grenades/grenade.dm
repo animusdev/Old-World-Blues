@@ -11,7 +11,6 @@
 	slot_flags = SLOT_BELT
 	var/active = 0
 	var/det_time = 50
-	var/display_timer = 1
 /obj/item/weapon/grenade/proc/clown_check(var/mob/living/user)
 	return 1 // Allows to use grenades at all
 	//TODO: DNA3 clown_block
@@ -45,14 +44,15 @@
 	return*/
 
 
-/obj/item/weapon/grenade/examine()
-	set src in usr
-	..()
-	if(display_timer)
+/obj/item/weapon/grenade/examine(mob/user, return_dist = 1)
+	. = ..()
+	if(.<=1)
 		if(det_time > 1)
-			usr << "The timer is set to [det_time/10] seconds."
-		else
-			usr << "\The [src] is set for instant detonation."
+			user << "The timer is set to [det_time/10] seconds."
+			return
+		if(det_time == null)
+			return
+		user << "\The [src] is set for instant detonation."
 
 
 /obj/item/weapon/grenade/attack_self(mob/user as mob)
