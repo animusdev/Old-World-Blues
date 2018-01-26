@@ -44,9 +44,6 @@
 /atom/proc/on_reagent_change()
 	return
 
-/atom/proc/to_bump()
-	return
-
 /atom/proc/Bumped(AM as mob|obj)
 	return
 

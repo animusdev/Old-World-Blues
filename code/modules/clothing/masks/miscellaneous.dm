@@ -74,14 +74,6 @@
 
 	adjust_mask(usr)
 
-/obj/item/clothing/mask/whitebalaclava
-	name = "white balaclava"
-	desc = "This makes you sacrifice for your virtues."
-	icon_state = "fedayeenclava"
-	item_state = "fedayeenclava"
-	w_class = ITEM_SIZE_SMALL
-	body_parts_covered = FACE
-
 /obj/item/clothing/mask/fakemoustache
 	name = "fake moustache"
 	desc = "Warning: moustache is fake."
