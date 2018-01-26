@@ -157,13 +157,13 @@
 /obj/item/clothing/under/rank/warden/blue
 	desc = "The insignia on this uniform tells you that this uniform belongs to the Warden."
 	name = "warden's uniform"
-	icon_state = "warden_blue"
+	icon_state = "wardenblue"
 	item_state = "ba_suit"
 
 /obj/item/clothing/under/rank/security/blue
 	name = "security officer's uniform"
 	desc = "The latest in fashionable security outfits."
-	icon_state = "sec_blue"
+	icon_state = "secblue"
 	item_state = "ba_suit"
 
 /*
