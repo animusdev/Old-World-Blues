@@ -29,6 +29,21 @@
 	desc = "An armored vest that protects against some damage. This one has a NanoTrasen corporate badge."
 	icon_state = "armorsec"
 
+obj/item/clothing/suit/armor/m35filde
+	name = " M35 Filde Jacket"
+	desc = "Old armored jacket"
+	icon_state = "m35jac"
+	item_state = "armor"
+	armor = list(melee = 30, bullet = 70, laser = 20, energy = 10, bomb = 25, bio = 0, rad = 0)
+
+obj/item/clothing/suit/armor/waffenform
+	name = " Waffen Jacket"
+	desc = "Cool for punching xenos scum"
+	icon_state = "waffenss"
+	item_state = "armor"
+	armor = list (melee = 50, bullet = 80, laser = 30, energy = 0, bomb = 25, bio = 0, rad = 0)
+
+
 /obj/item/clothing/suit/armor/riot
 	name = "riot suit"
 	desc = "A suit of armor with heavy padding to protect against melee attacks. Looks like it might impair movement."

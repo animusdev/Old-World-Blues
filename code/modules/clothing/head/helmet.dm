@@ -92,6 +92,13 @@
 			playsound(loc, 'sound/mecha/mechmove03.ogg', 50, 1, -1)
 			update_clothing_icon()	//so our mob-overlays update
 
+obj/item/clothing/head/helmet/m35
+	name = "M35 helmet"
+	icon_state = "m35"
+	item_state = "helmet"
+	armor = list(melee = 60, bulet = 40, laser = 0, energy = 2, bomb = 20, bio = 0, rad = 0)
+	body_parts_covered = HEAD|EYES
+	siemens_coefficient = 0.7
 
 /obj/item/clothing/head/helmet/dermal
 	name = "Dermal Armour Patch"
