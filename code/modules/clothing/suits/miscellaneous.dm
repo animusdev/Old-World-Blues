@@ -235,6 +235,10 @@
 	desc = "A navy jacket."
 	icon_state = "navy_jacket"
 
+obj/item/clothing/suit/witchrobe
+	name = "Witch Robe"
+	desc = "Make feel yourself like 14-years old anime girl"
+	icon_state = "witchrobe"
 //coats
 
 /obj/item/clothing/suit/storage/tailcoat

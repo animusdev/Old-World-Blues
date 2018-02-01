@@ -115,6 +115,12 @@
 	desc = "<i>'I guess it's a redhead.'</i>"
 	body_parts_covered = 0
 
+/obj/item/clothing/head/waffencap
+	name = "Waffen SS cap"
+	icon_state = "waffencap"
+	desc = "Oh hi dear"
+	body_parts_covered = 0
+
 /obj/item/clothing/head/mailman
 	name = "station cap"
 	icon_state = "mailman"

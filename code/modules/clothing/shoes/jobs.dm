@@ -42,6 +42,11 @@
 	if(knife)
 		overlays += image(icon, "[initial(icon_state)]_knife")
 
+obj/item/clothing/shoes/jackboots/blackboots
+	name = "Black boots"
+	desc = "Punch xenos scum"
+	icon_state = "blackboots"
+
 /obj/item/clothing/shoes/jackboots/unathi
 	name = "toe-less jackboots"
 	desc = "Modified pair of jackboots, particularly friendly to those species whose toes hold claws."
