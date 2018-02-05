@@ -48,6 +48,11 @@
 	icon_state = "digiboots"
 	species_restricted = null
 
+/obj/item/clothing/shoes/jackboots/nazi
+	name = "nazi jackboots"
+	desc = "A nazi jackboots."
+	icon_state = "nazi_boots"
+
 /obj/item/clothing/shoes/workboots
 	name = "workboots"
 	desc = "A pair of steel-toed work boots designed for use in industrial settings. Safety first."

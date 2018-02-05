@@ -130,6 +130,23 @@ obj/item/clothing/head/welding/blue
 		user << "You lower the ear flaps on the ushanka."
 
 /*
+ * Nazi
+ */
+/obj/item/clothing/head/nazi
+	name = "waffen ss helmet"
+	desc = "A WAFFEN SS Helmet!"
+	icon_state = "WAFFEN_SS_Helmet"
+	armor = list(melee = 80, bullet = 60, laser = 50,energy = 10, bomb = 25, bio = 10, rad = 0)
+	siemens_coefficient = 0.8
+
+/obj/item/clothing/head/nazicap
+	name = "waffen ss cap"
+	desc = "A WAFFEN SS Cap!"
+	icon_state = "WAFFEN_SS_cap"
+	armor = list(melee = 80, bullet = 60, laser = 50,energy = 10, bomb = 25, bio = 10, rad = 0)
+	siemens_coefficient = 0.8
+
+/*
  * Pumpkin head
  */
 /obj/item/clothing/head/pumpkinhead

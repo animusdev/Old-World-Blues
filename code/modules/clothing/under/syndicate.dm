@@ -20,3 +20,10 @@
 	name = "PMC tactical turtleneck"
 	desc = "Stain-resistant tactical attire favored mostly by PMCs, velcro-locked pockets and adjustable trouser-legs lenght. So tactical, the jokes are over."
 	icon_state = "PMCsuit"
+
+/obj/item/clothing/under/syndicate/nazi
+	name = "nazi uniform"
+	icon_state = "WAFFEN_SS_F"
+	item_state = "WAFFEN_SS_F"
+	armor = list(melee = 20, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 0)
+	siemens_coefficient = 0.9

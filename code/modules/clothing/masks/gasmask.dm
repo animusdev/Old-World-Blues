@@ -119,3 +119,9 @@
 	desc = "That's a standard-issue gasmask of the NT security service. Looks too dystopian, isn't it?"
 	icon_state = "secgasmask"
 	item_state = "secgasmask"
+
+/obj/item/clothing/mask/gas/nazi
+	name = "nazi gas mask"
+	desc = "A face-covering nazi mask that can be connected to an air supply. Filters harmful gases from the air."
+	icon_state = "Nazi_gasmask"
+	item_state = "Nazi_gasmask"
