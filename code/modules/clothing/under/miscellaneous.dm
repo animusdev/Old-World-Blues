@@ -25,6 +25,11 @@
 	icon_state = "mailman"
 	item_state = "blue"
 
+/obj/item/clothing/under/afghanka_winter
+	name = "afghanka"
+	desc = "An artifact from a long forgotten past. You can only wonder what patch with a Red Flag on it's shoulder means."
+	icon_state = "afghanka_winter"
+
 /obj/item/clothing/under/sexyclown
 	name = "sexy-clown suit"
 	desc = "It makes you look HONKable!"

@@ -105,6 +105,10 @@
 	display_name = "kilt"
 	path = /obj/item/clothing/under/kilt
 
+/datum/gear/uniform/afghanka_winter
+	display_name = "afghanka, winter"
+	path = /obj/item/clothing/under/afghanka_winter
+
 /datum/gear/uniform/blackjumpskirt
 	display_name = "jumpskirt, black"
 	path = /obj/item/clothing/under/blackjumpskirt
