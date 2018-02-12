@@ -70,7 +70,7 @@
 	if(!isEmpProof())
 		if(prob(100/severity))
 			stat |= EMPED
-			kill_light()
+			set_light(0)
 			kick_viewers()
 			triggerCameraAlarm(30 / severity)
 			update_icon()

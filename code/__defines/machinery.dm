@@ -2,8 +2,6 @@
 #define DOOR_CRUSH_DAMAGE 10
 #define ALIEN_SELECT_AFK_BUFFER  1    // How many minutes that a person can be AFK before not being allowed to be an alien.
 
-#define MACHINERY_TICKRATE 2		// Tick rate for machinery in seconds. As it affects CELLRATE calculation it is kept as define here
-
 // Channel numbers for power.
 #define EQUIP   1
 #define LIGHT   2

@@ -229,7 +229,7 @@
 		set_light(brightness_on)
 		light_applied = 1
 	else if(!on && light_applied)
-		kill_light()
+		set_light(0)
 		light_applied = 0
 	update_icon(user)
 

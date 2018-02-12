@@ -69,13 +69,13 @@
 		interference = TRUE
 		spawn(0)
 			overlays.Cut()
-			kill_light()
+			set_light(0)
 			sleep(3)
 			overlays += plant
 			set_light(3)
 			sleep(3)
 			overlays -= plant
-			kill_light()
+			set_light(0)
 			sleep(3)
 			overlays += plant
 			set_light(3)

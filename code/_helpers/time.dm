@@ -77,9 +77,7 @@ proc/round_duration()
 	next_duration_update = world.time + 1 MINUTES
 	return last_round_duration
 
-/var/midnight_rollovers = 0
-/var/rollovercheck_last_timeofday = 0
-/proc/update_midnight_rollover()
-	if (world.timeofday < rollovercheck_last_timeofday) //TIME IS GOING BACKWARDS!
-		return midnight_rollovers++
-	return midnight_rollovers
+//Can be useful for things dependent on process timing
+/proc/process_schedule_interval(var/process_name)
+	var/datum/controller/process/process = processScheduler.getProcess(process_name)
+	return process.schedule_interval

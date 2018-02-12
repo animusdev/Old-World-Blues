@@ -20,7 +20,7 @@
 		set_light(brightness)
 	else
 		icon_state = initial(icon_state)
-		kill_light()
+		set_light(0)
 
 /obj/item/decoration/garland/New()
 	on = 1

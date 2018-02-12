@@ -25,7 +25,7 @@
 		set_light(brightness_on)
 	else
 		icon_state = "[initial(icon_state)]"
-		kill_light()
+		set_light(0)
 
 /obj/item/device/flashlight/attack_self(mob/user)
 	if(!isturf(user.loc))

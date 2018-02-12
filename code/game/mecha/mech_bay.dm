@@ -230,7 +230,7 @@
 		data["mecha_charge_percentage"] = isnull(recharge_floor.recharging_mecha) ? 0 : recharge_floor.recharging_mecha.cell.percent()
 	else
 		data["has_mech"] = 0
-	ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
+	ui = nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
 		// the ui does not exist, so we'll create a new() one
 	// for a list of parameters and their descriptions see the code docs in \code\modules\nano\nanoui.dm

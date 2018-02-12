@@ -2,7 +2,7 @@
 	set category = "Debug"
 	set name = "Show Air Report"
 
-	if(!air_master)
+	if(!master_controller || !air_master)
 		alert(usr,"Master_controller or air_master not found.","Air Report")
 		return
 

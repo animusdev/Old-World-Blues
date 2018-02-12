@@ -117,7 +117,7 @@ Programs are a file that can be executed
 /*
 	The computer object will transfer process() calls to the program.
 */
-/datum/file/program/process()
+/datum/file/program/proc/process()
 	if(refresh && computer && !computer.stat)
 		computer.updateDialog()
 		update_icon()

@@ -99,7 +99,7 @@
 		ticks_completed = 0
 
 /obj/item/integrated_circuit/time/ticker/process()
-	var/process_ticks = SS_OBJECT_TR
+	var/process_ticks = process_schedule_interval("obj")
 	ticks_completed += process_ticks
 	if(ticks_completed >= ticks_to_pulse)
 		if(ticks_to_pulse >= process_ticks)

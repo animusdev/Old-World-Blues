@@ -18,7 +18,7 @@
 
 /obj/Destroy()
 	processing_objects -= src
-	SSnanoui.close_uis(src)
+	nanomanager.close_uis(src)
 	return ..()
 
 /obj/Topic(href, href_list, var/nowindow = 0, var/datum/topic_state/state = default_state)
@@ -44,7 +44,7 @@
 
 /obj/item/proc/is_used_on(obj/O, mob/user)
 
-/obj/process()
+/obj/proc/process()
 	processing_objects.Remove(src)
 	return 0
 

@@ -86,7 +86,7 @@
 
 	// Unpowered
 	else if(stat & NOPOWER)
-		kill_light()
+		set_light(0)
 
 	else
 		if(screen_icon in icon_states(icon))

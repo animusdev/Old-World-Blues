@@ -14,6 +14,7 @@
 	var/moved_recently = 0
 	var/tmp/mob/pulledby = null
 
+	var/auto_init = 1
 
 /atom/movable/New()
 	..()
