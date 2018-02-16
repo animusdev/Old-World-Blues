@@ -3,11 +3,8 @@
 
 /atom/movable/New()
 	..()
-	if(auto_init)
-		if(ticker && ticker.current_state == GAME_STATE_PLAYING)
-			initialize()
-		else
-			init_atoms += src
+	if(auto_init && ticker && ticker.current_state == GAME_STATE_PLAYING)
+		initialize()
 
 /mob/auto_init = 1
 

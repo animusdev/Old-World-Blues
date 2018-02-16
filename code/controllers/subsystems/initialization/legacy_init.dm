@@ -32,13 +32,14 @@
 	transfer_controller = new
 
 /datum/controller/subsystem/legacy_init/proc/setup_objects()
+	var/count = 0
 	// Do these first since character setup will rely on them
 	// Set up antagonists.
 	populate_antag_type_list()
 
 	//Set up spawn points.
 	populate_spawn_points()
-
+/*
 	admin_notice("<span class='danger'>Initializing [init_atoms.len] movable atom\s.</span>", R_DEBUG)
 	while(init_atoms.len) // Use a while loop so that in the event of new atoms being spawned, we will keep initializing them.
 		var/atom/movable/object = init_atoms[1]
@@ -46,15 +47,18 @@
 			object.initialize()
 		init_atoms -= object
 		CHECK_TICK
-	init_atoms.Cut()
+	init_atoms.Cut()*/
 
+	//Fuck this shit above, it doesn't initialize even a half, idk why
 
-	admin_notice("<span class='danger'>Initializing pipes (Maybe again)...</span>", R_DEBUG)
-	for(var/obj/machinery/atmospherics/pipe/pipe in world)
-		pipe.initialize()
+	admin_notice("<span class='danger'>Initializing movable atom\s.</span>", R_DEBUG)
+	for(var/atom/movable/object in world)
+		object.initialize()
+		count++
+	admin_notice("<span class='danger'>Initialized [count] movable atom\s.</span>", R_DEBUG)
 
 	admin_notice("<span class='danger'>Building pipe networks</span>", R_DEBUG)
-	var/count = 0
+	count = 0
 	for(var/obj/machinery/atmospherics/machine in machines)
 		machine.build_network()
 		count++
