@@ -18,7 +18,7 @@
 	blend_mode = BLEND_ADD
 	plane = DARK_PLANE // Just below the master plane.
 	icon = 'icons/planar_lighting/over_dark.dmi'
-	alpha = 150 // moodiness lowered, by popular demand // fuck popular demand
+	alpha = 60 // moodiness lowered, by popular demand // fuck popular demand
 	appearance_flags = RESET_TRANSFORM | RESET_COLOR | RESET_ALPHA
 
 /obj/screen/plane/dark/New()
