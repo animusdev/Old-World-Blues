@@ -118,8 +118,8 @@
 
 		buildstage = 0
 		wiresexposed = 1
-		pixel_x = (dir & 3)? 0 : (dir == 4 ? -32 : 32)
-		pixel_y = (dir & 3)? (dir ==1 ? -32 : 32) : 0
+		pixel_x = (dir & 3)? 0 : (dir == 4 ? -24 : 24)
+		pixel_y = (dir & 3)? (dir ==1 ? -24 : 24) : 0
 		update_icon()
 		return
 
@@ -305,19 +305,19 @@
 /obj/machinery/alarm/update_icon()
 	if(buildstage == 0)//air alarm on a wall
 		icon_state = "alarm_b0"
-		kill_light()
+		set_light(0)
 		return
 	if(buildstage == 1)//air alar witch circuit
 		icon_state = "alarm_b1"
-		kill_light()
+		set_light(0)
 		return
 	if(wiresexposed)//air alarm witch wire
 		icon_state = "alarmx"
-		kill_light()
+		set_light(0)
 		return
 	if((stat & (NOPOWER|BROKEN)) || shorted)
 		icon_state = "alarmp"
-		kill_light()
+		set_light(0)
 		return
 
 
@@ -509,7 +509,7 @@
 	if(!(locked && !remote_connection) || remote_access || issilicon(user))
 		populate_controls(data)
 
-	ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
+	ui = nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if(!ui)
 		ui = new(user, src, ui_key, "air_alarm.tmpl", src.name, 325, 625, master_ui = master_ui, state = state)
 		ui.set_initial_data(data)
@@ -1105,8 +1105,8 @@ FIRE ALARM
 	if(building)
 		buildstage = 0
 		wiresexposed = 1
-		pixel_x = (dir & 3)? 0 : (dir == 4 ? -32 : 32)
-		pixel_y = (dir & 3)? (dir ==1 ? -32 : 32) : 0
+		pixel_x = (dir & 3)? 0 : (dir == 4 ? -24 : 24)
+		pixel_y = (dir & 3)? (dir ==1 ? -24 : 24) : 0
 
 /obj/machinery/firealarm/initialize()
 	if(isStationLevel(z))

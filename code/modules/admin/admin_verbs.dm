@@ -651,11 +651,11 @@ var/list/admin_verbs_mod = list(
 	set category = "Debug"
 	set name = "Kill Air"
 	set desc = "Toggle Air Processing"
-	if(SSair.can_fire)
-		SSair.enable()
+	if(air_processing_killed)
+		air_processing_killed = 0
 		usr << "<b>Enabled air processing.</b>"
 	else
-		SSair.disable()
+		air_processing_killed = 1
 		usr << "<b>Disabled air processing.</b>"
 	log_admin("[usr.key] used 'kill air'.")
 

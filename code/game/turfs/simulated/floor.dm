@@ -154,9 +154,9 @@ turf/simulated/floor/proc/update_icon()
 					set_light(5)
 				if(LIGHTFLOOR_STATE_BROKEN)
 					icon_state = "light_off"
-					kill_light()
+					set_light(0)
 		else
-			kill_light()
+			set_light(0)
 			icon_state = "light_off"
 	else if(is_grass_floor())
 		if(!broken && !burnt)
@@ -360,7 +360,7 @@ turf/simulated/floor/proc/update_icon()
 
 	if(!floor_type) return
 	icon_plating = "plating"
-	kill_light()
+	set_light(0)
 	floor_type = null
 	intact = 0
 	broken = 0
@@ -376,7 +376,7 @@ turf/simulated/floor/proc/update_icon()
 	broken = 0
 	burnt = 0
 	intact = 1
-	kill_light()
+	set_light(0)
 	if(T)
 		if(istype(T,/obj/item/stack/tile/steel))
 			floor_type = T.type

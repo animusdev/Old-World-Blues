@@ -226,7 +226,7 @@
 	next_fire_time = world.time + fire_delay
 
 	if(muzzle_flash)
-		kill_light()
+		set_light(0)
 
 //obtains the next projectile to fire
 /obj/item/weapon/gun/proc/consume_next_projectile()

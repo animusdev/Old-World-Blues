@@ -16,11 +16,11 @@
 
 /turf/unsimulated/wall/supermatter/New()
 	..()
-	START_PROCESSING(SSprocessing, src)
+	processing_turfs.Add(src)
 	next_check = world.time+5 SECONDS
 
 /turf/unsimulated/wall/supermatter/Destroy()
-	STOP_PROCESSING(SSprocessing, src)
+	processing_turfs.Remove(src)
 	..()
 
 /turf/unsimulated/wall/supermatter/process()
@@ -29,7 +29,7 @@
 
 	// No more available directions? Shut down process().
 	if(avail_dirs.len==0)
-		STOP_PROCESSING(SSprocessing, src)
+		processing_objects.Remove(src)
 		return 1
 
 	// We're checking, reset the timer.
@@ -57,7 +57,7 @@
 			T.ChangeTurf(type)
 
 	if((spawned & (NORTH|SOUTH|EAST|WEST)) == (NORTH|SOUTH|EAST|WEST))
-		STOP_PROCESSING(SSprocessing, src)
+		processing_turfs -= src
 		return
 
 /turf/unsimulated/wall/supermatter/attack_generic(mob/user as mob)

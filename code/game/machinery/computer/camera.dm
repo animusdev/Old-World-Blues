@@ -64,7 +64,7 @@
 			data["current"] = current.nano_structure()
 		data["cameras"] = list("__json_cache" = camera_cache)
 
-		ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
+		ui = nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
 		if (!ui)
 			ui = new(user, src, ui_key, "sec_camera.tmpl", "Camera Console", 400, 650)
 

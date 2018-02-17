@@ -185,7 +185,7 @@
 		force_holder = wrapped.force
 		wrapped.force = 0.0
 		wrapped.attack(M,user)
-		if(QDELETED(wrapped))
+		if(deleted(wrapped))
 			wrapped = null
 		return TRUE
 	return FALSE

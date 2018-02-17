@@ -23,7 +23,7 @@ datum/controller/vote
 				del(vote)
 			vote = src
 
-	process()	//called by master_controller
+	proc/process()	//called by master_controller
 		if(mode)
 			// No more change mode votes after the game has started.
 			// 3 is GAME_STATE_PLAYING, but that #define is undefined for some reason

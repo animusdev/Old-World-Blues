@@ -33,7 +33,7 @@
 			log_game("[key_name_admin(user)] attached both tanks to a transfer valve.", location)
 
 		update_icon()
-		SSnanoui.update_uis(src) // update all UIs attached to src
+		nanomanager.update_uis(src) // update all UIs attached to src
 //TODO: Have this take an assemblyholder
 	else if(isassembly(item))
 		var/obj/item/device/assembly/A = item
@@ -53,7 +53,7 @@
 		bombers += "[key_name(user)] attached a [item] to a transfer valve."
 		log_game("[key_name_admin(user)] attached a [item] to a transfer valve.", location)
 		attacher = user
-		SSnanoui.update_uis(src) // update all UIs attached to src
+		nanomanager.update_uis(src) // update all UIs attached to src
 	return
 
 
@@ -76,7 +76,7 @@
 	data["valveOpen"] = valve_open ? 1 : 0
 
 	// update the ui if it exists, returns null if no ui is passed/found
-	ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
+	ui = nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
 		// the ui does not exist, so we'll create a new() one
         // for a list of parameters and their descriptions see the code docs in \code\modules\nano\nanoui.dm
@@ -164,7 +164,7 @@
 
 	valve_open = 0
 
-	if(QDELETED(tank_one) || QDELETED(tank_two))
+	if(deleted(tank_one) || deleted(tank_two))
 		return
 
 	var/ratio1 = tank_one.air_contents.volume/tank_two.air_contents.volume
