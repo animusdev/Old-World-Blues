@@ -469,6 +469,15 @@ its easier to just keep the beam vertical.
 		crash_with("Warning: [src]([type]) initialization_check multiple times!")
 	initialization_check = TRUE
 
+	//Aurora code, no use, just for work
+
+	/*if (light_power && light_range)
+		update_light()
+
+	if (opacity && isturf(loc))
+		var/turf/T = loc
+		T.has_opaque_atom = TRUE*/ // No need to recalculate it in this case, it's guaranteed to be on afterwards anyways.
+
 	return INITIALIZE_HINT_NORMAL
 
 //called if Initialize returns INITIALIZE_HINT_LATELOAD

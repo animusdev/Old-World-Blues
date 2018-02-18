@@ -155,8 +155,8 @@
 	src.tdir = dir		// to fix Vars bug
 	set_dir(SOUTH)
 
-	pixel_x = (src.tdir & 3)? 0 : (src.tdir == 4 ? 32 : -32)
-	pixel_y = (src.tdir & 3)? (src.tdir ==1 ? 32 : -32) : 0
+	pixel_x = (src.tdir & 3)? 0 : (src.tdir == 4 ? 24 : -24)
+	pixel_y = (src.tdir & 3)? (src.tdir ==1 ? 24 : -24) : 0
 	if (building==0)
 		init()
 	else
@@ -342,7 +342,7 @@
 					color = "#82FF4C"
 			set_light(l_range = 2, l_power = 0.5, l_color = color)
 		else
-			kill_light()
+			set_light(0)
 
 /obj/machinery/power/apc/proc/check_updates()
 
@@ -823,7 +823,7 @@
 	)
 
 	// update the ui if it exists, returns null if no ui is passed/found
-	ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
+	ui = nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
 		// the ui does not exist, so we'll create a new() one
         // for a list of parameters and their descriptions see the code docs in \code\modules\nano\nanoui.dm

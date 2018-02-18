@@ -87,29 +87,6 @@
 /proc/log_DB(text)
 	log_generic("DATABASE", text, null, 1, 0)
 
-/proc/log_mc(text)
-	log_generic("MASTER", text, null, 1, 0)
-
-/proc/log_gc(text, type, high_severity = FALSE)
-	log_generic("GC", text, null, 1, 0)
-
-/proc/log_ss(subsystem, text, log_world = TRUE)
-	if (!subsystem)
-		subsystem = "UNKNOWN"
-	var/msg = "[subsystem]: [text]"
-	log_generic("SS", msg, null, 1, 0)
-	if (log_world)
-		world.log << "SS[subsystem]: [text]"
-
-/proc/log_ss_init(text)
-	log_generic("SS", "[text]", null, 1, 0)
-
-// Generally only used when something has gone very wrong.
-/proc/log_failsafe(text)
-	log_generic("FAILSAFE", text, null, 1, 0)
-
-
-
 //pretty print a direction bitflag, can be useful for debugging.
 /proc/print_dir(var/dir)
 	var/list/comps = list()

@@ -109,7 +109,7 @@ Data storage vars:
 				CRASH("The global_iterator loop \ref[src] failed to terminate in designated timeframe. This may be caused by server lagging.")
 		return 1
 
-	process()
+	proc/process()
 		return
 
 	proc/active()

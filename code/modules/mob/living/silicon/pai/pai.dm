@@ -205,7 +205,7 @@
 	medicalActive1 = null
 	medicalActive2 = null
 	medical_cannotfind = 0
-	SSnanoui.update_uis(src)
+	nanomanager.update_uis(src)
 	usr << SPAN_NOTE("You reset your record-viewing software.")
 
 /mob/living/silicon/pai/cancel_camera()

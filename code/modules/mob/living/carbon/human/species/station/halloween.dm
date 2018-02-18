@@ -12,12 +12,12 @@
 	var/is_skeleton = (SKELETON & H.status_flags)
 	var/light_amount = 0
 	if(isturf(H.loc))
-/*		var/turf/T = H.loc
+		var/turf/T = H.loc
 		var/atom/movable/lighting_overlay/L = locate(/atom/movable/lighting_overlay) in T
 		if(L)
 			light_amount = L.lum_r + L.lum_g + L.lum_b //hardcapped so it's not abused by having a ton of flashlights
-		else*/
-		light_amount =  10
+		else
+			light_amount =  10
 	if(light_amount > 0.9)
 		if(is_skeleton)
 			H.status_flags ^= SKELETON

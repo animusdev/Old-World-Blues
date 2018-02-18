@@ -106,6 +106,7 @@ var/list/ghostteleportlocs = list()
 	icon_state = "space"
 	requires_power = 1
 	always_unpowered = 1
+	lighting_use_dynamic = 0
 	power_light = 0
 	power_equip = 0
 	power_environ = 0
@@ -365,6 +366,7 @@ area/space/atmosalert()
 	name = "\improper Centcom"
 	icon_state = "centcom"
 	requires_power = 0
+	lighting_use_dynamic = 0
 	is_escape_location = 1
 
 /area/centcom/control
@@ -403,6 +405,7 @@ area/space/atmosalert()
 	name = "\improper Mercenary Base"
 	icon_state = "syndie-ship"
 	requires_power = 0
+	lighting_use_dynamic = 0
 
 /area/syndicate_mothership/control
 	name = "\improper Mercenary Control Room"
@@ -456,6 +459,7 @@ area/space/atmosalert()
 	name = "\improper Thunderdome"
 	icon_state = "thunder"
 	requires_power = 0
+	lighting_use_dynamic = 0
 
 /area/tdome/tdome1
 	name = "\improper Thunderdome (Team 1)"
@@ -538,6 +542,7 @@ area/space/atmosalert()
 	name = "\improper Wizard's Den"
 	icon_state = "yellow"
 	requires_power = 0
+	lighting_use_dynamic = 0
 
 /area/skipjack_station
 	name = "\improper Skipjack"
@@ -1046,6 +1051,7 @@ area/crew_quarters/barman
 /area/holodeck
 	name = "\improper Holodeck"
 	icon_state = "Holodeck"
+	lighting_use_dynamic = 0
 
 /area/holodeck/alphadeck
 	name = "\improper Holodeck Alpha"
@@ -1177,6 +1183,7 @@ area/crew_quarters/barman
 /area/solar
 	requires_power = 1
 	always_unpowered = 1
+	lighting_use_dynamic = 0
 
 	auxport
 		name = "\improper Fore Port Solar Array"
@@ -1892,21 +1899,25 @@ area/crew_quarters/barman
 	name = "\improper AI Sat Ext"
 	icon_state = "storage"
 	luminosity = 1
+	lighting_use_dynamic = 0
 
 /area/turret_protected/AIsatextFS
 	name = "\improper AI Sat Ext"
 	icon_state = "storage"
 	luminosity = 1
+	lighting_use_dynamic = 0
 
 /area/turret_protected/AIsatextAS
 	name = "\improper AI Sat Ext"
 	icon_state = "storage"
 	luminosity = 1
+	lighting_use_dynamic = 0
 
 /area/turret_protected/AIsatextAP
 	name = "\improper AI Sat Ext"
 	icon_state = "storage"
 	luminosity = 1
+	lighting_use_dynamic = 0
 
 /area/turret_protected/NewAIMain
 	name = "\improper AI Main New"
@@ -2091,6 +2102,7 @@ area/crew_quarters/barman
 	name = "Beach"
 	icon_state = "null"
 	luminosity = 1
+	lighting_use_dynamic = 0
 	requires_power = 0
 	ambience = list()
 	var/sound/mysound = null
@@ -2121,7 +2133,7 @@ area/crew_quarters/barman
 				mysound.status = SOUND_PAUSED | SOUND_UPDATE
 				Obj << mysound
 
-	process()
+	proc/process()
 		set background = 1
 
 		var/sound/S = null
@@ -2212,6 +2224,7 @@ var/list/the_station_areas = list (
 	name = "Keelin's private beach"
 	icon_state = "null"
 	luminosity = 1
+	lighting_use_dynamic = 0
 	requires_power = 0
 	var/sound/mysound = null
 
@@ -2241,7 +2254,7 @@ var/list/the_station_areas = list (
 				mysound.status = SOUND_PAUSED | SOUND_UPDATE
 				Obj << mysound
 
-	process()
+	proc/process()
 		set background = 1
 
 		var/sound/S = null

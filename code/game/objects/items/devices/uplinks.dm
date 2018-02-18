@@ -56,7 +56,7 @@ datum/nano_item_lists
 /obj/item/device/uplink/nano_host()
 	return loc
 
-/obj/item/device/uplink/initialize()
+/obj/item/device/uplink/New()
 	..()
 	welcome = ticker.mode.uplink_welcome
 	uses = ticker.mode.uplink_uses
@@ -218,7 +218,7 @@ datum/nano_item_lists
 	data += nanoui_data
 
 	// update the ui if it exists, returns null if no ui is passed/found
-	ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
+	ui = nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
 		// the ui does not exist, so we'll create a new() one
         // for a list of parameters and their descriptions see the code docs in \code\modules\nano\nanoui.dm
@@ -242,7 +242,7 @@ datum/nano_item_lists
 	if (!( ishuman(usr)))
 		return 1
 	var/mob/user = usr
-	var/datum/nanoui/ui = SSnanoui.get_open_ui(user, src, "main")
+	var/datum/nanoui/ui = nanomanager.get_open_ui(user, src, "main")
 	if ((usr.contents.Find(src.loc) || (in_range(src.loc, usr) && istype(src.loc.loc, /turf))))
 		usr.set_machine(src)
 		if(..(href, href_list))
