@@ -14,6 +14,9 @@ var/global/list/med_hud_users            = list() // List of all entities using 
 var/global/list/sec_hud_users            = list() // List of all entities using a security HUD.
 var/global/list/hud_icon_reference       = list()
 
+var/list/init_atoms = list()
+var/list/init_lights = list()
+
 // Those networks can only be accessed by pre-existing terminals. AIs and new terminals can't use them.
 var/list/restricted_camera_networks = list("thunder","ERT","NUKE","Secret")
 
@@ -109,7 +112,6 @@ var/list/reverse_dir = list( // reverse_dir[dir] = reverse of dir
 
 var/datum/station_state/start_state = null
 var/datum/configuration/config      = null
-var/datum/sun/sun                   = null
 
 var/list/powernets = list()
 
@@ -120,10 +122,6 @@ var/wavesecret    = 0
 var/gravity_is_on = 1
 
 var/join_motd = null
-
-var/datum/nanomanager/nanomanager		= new() // NanoManager, the manager for Nano UIs.
-var/datum/event_manager/event_manager	= new() // Event Manager, the manager for events.
-var/datum/subsystem/alarm/alarm_manager	= new() // Alarm Manager, the manager for alarms.
 
 var/list/awaydestinations = list() // Away missions. A list of landmarks that the warpgate can take you to.
 

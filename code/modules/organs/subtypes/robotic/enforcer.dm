@@ -97,7 +97,7 @@
 		verbs -= /obj/item/organ/external/robotic/enforcer/limb/leg/proc/toggle_magboots
 		qdel(magboots)
 		magboots = null
-		if(slave && !deleted(slave) && slave.owner == owner)
+		if(slave && !QDELETED(slave) && slave.owner == owner)
 			slave.prepare()
 			slave = null
 

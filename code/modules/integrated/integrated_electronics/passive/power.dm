@@ -21,9 +21,9 @@
 	var/max_power = 1
 
 /obj/item/integrated_circuit/passive/power/solar_cell/make_energy()
-	var/turf/T = get_turf(src)
-	var/light_amount = T ? T.get_lumcount() : 0
-	var/adjusted_power = max(max_power * light_amount, 0)
+//	var/turf/T = get_turf(src)
+//	var/light_amount = 10
+	var/adjusted_power = 10*rand(0.3, 1)
 	adjusted_power = round(adjusted_power, 0.1)
 	if(adjusted_power)
 		if(assembly)

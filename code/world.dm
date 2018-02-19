@@ -75,12 +75,7 @@ var/global/datum/global_init/init = new ()
 
 	generate_body_modification_lists()
 
-	processScheduler = new
-	master_controller = new /datum/controller/game_controller()
-	spawn(1)
-		processScheduler.deferSetupFor(/datum/controller/process/ticker)
-		processScheduler.setup()
-		master_controller.setup()
+	Master.Initialize(10, FALSE)
 
 	spawn(3000)		//so we aren't adding to the round-start lag
 		if(config.ToRban)
@@ -356,7 +351,7 @@ var/world_topic_spam_protect_time = world.timeofday
 		world << sound(pick('sound/AI/newroundsexy.ogg','sound/misc/apcdestroyed.ogg','sound/misc/bangindonk.ogg')) // random end sounds!! - LastyBatsy
 		*/
 
-	processScheduler.stop()
+	Master.Shutdown()
 
 	for(var/client/C in clients)
 		if(config.server)	//if you set a server location in config.txt, it sends you there instead of trying to reconnect to the same world address. -- NeoFite

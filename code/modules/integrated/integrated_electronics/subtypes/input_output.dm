@@ -500,7 +500,7 @@
 	if(light_toggled)
 		set_light(l_range = light_brightness, l_power = light_brightness, l_color = light_rgb)
 	else
-		set_light(0)
+		kill_light()
 	power_draw_idle = light_toggled ? light_brightness * 2 : 0
 
 /obj/item/integrated_circuit/output/light/advanced/update_lighting()

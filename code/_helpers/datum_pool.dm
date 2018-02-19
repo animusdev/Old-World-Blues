@@ -58,10 +58,7 @@ var/global/list/GlobalPool = list()
 		#ifdef DEBUG_ATOM_POOL
 		world << text("DEBUG_DATUM_POOL: PlaceInPool([]) exceeds []. Discarding.", D.type, ATOM_POOL_COUNT)
 		#endif
-		if(garbage_collector)
-			garbage_collector.AddTrash(D)
-		else
-			del(D)
+		qdel(D, TRUE)
 		return
 
 	if(D in GlobalPool[D.type])
@@ -73,7 +70,6 @@ var/global/list/GlobalPool = list()
 	GlobalPool[D.type] += D
 	D.Destroy()
 	D.ResetVars()
-	D.disposed = 1 //Set to stop processing while pooled
 
 /proc/IsPooled(var/datum/D)
 	if(isnull(GlobalPool[D.type]))
@@ -85,7 +81,6 @@ var/global/list/GlobalPool = list()
 		New(arglist(args))
 	else
 		New(args)
-	disposed = null
 
 /atom/movable/Prepare(args)
 	var/list/args_list = args

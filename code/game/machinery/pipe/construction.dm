@@ -462,7 +462,7 @@ Buildable meters
 			var/turf/T = P.loc
 			P.level = T.intact ? 2 : 1
 			P.initialize()
-			if (deleted(P))
+			if (QDELETED(P))
 				usr << pipefailtext
 				return 1
 			P.build_network()
@@ -481,7 +481,7 @@ Buildable meters
 			var/turf/T = P.loc
 			P.level = T.intact ? 2 : 1
 			P.initialize()
-			if (deleted(P))
+			if (QDELETED(P))
 				usr << pipefailtext
 				return 1
 			P.build_network()
@@ -500,7 +500,7 @@ Buildable meters
 			var/turf/T = P.loc
 			P.level = T.intact ? 2 : 1
 			P.initialize()
-			if (deleted(P))
+			if (QDELETED(P))
 				usr << pipefailtext
 				return 1
 			P.build_network()
@@ -519,7 +519,7 @@ Buildable meters
 			var/turf/T = P.loc
 			P.level = T.intact ? 2 : 1
 			P.initialize()
-			if (deleted(P))
+			if (QDELETED(P))
 				usr << pipefailtext
 				return 1
 			P.build_network()
@@ -538,7 +538,7 @@ Buildable meters
 			//var/turf/T = P.loc
 			//P.level = T.intact ? 2 : 1
 			P.initialize()
-			if (deleted(P))
+			if (QDELETED(P))
 				usr << pipefailtext
 				return 1
 			P.build_network()
@@ -573,7 +573,7 @@ Buildable meters
 			var/turf/T = M.loc
 			M.level = T.intact ? 2 : 1
 			M.initialize()
-			if (deleted(M))
+			if (QDELETED(M))
 				usr << pipefailtext
 				return 1
 			M.build_network()
@@ -642,7 +642,7 @@ Buildable meters
 			var/turf/T = M.loc
 			M.level = T.intact ? 2 : 1
 			M.initialize()
-			if (deleted(M))
+			if (QDELETED(M))
 				usr << pipefailtext
 				return 1
 			M.build_network()
@@ -721,7 +721,7 @@ Buildable meters
 			//var/turf/T = P.loc
 			//P.level = T.intact ? 2 : 1
 			P.initialize()
-			if (deleted(P))
+			if (QDELETED(P))
 				usr << pipefailtext //"There's nothing to connect this pipe to! (with how the pipe code works, at least one end needs to be connected to something, otherwise the game deletes the segment)"
 				return 1
 			P.build_network()
@@ -904,7 +904,7 @@ Buildable meters
 			var/turf/T = P.loc
 			P.level = T.intact ? 2 : 1
 			P.initialize()
-			if (deleted(P))
+			if (QDELETED(P))
 				usr << pipefailtext
 				return 1
 			P.build_network()

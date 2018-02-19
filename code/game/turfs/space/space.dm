@@ -25,7 +25,7 @@
 	if(locate(/turf/simulated) in orange(1,src))
 		set_light(config.starlight)
 	else
-		set_light(0)
+		kill_light()
 
 /turf/space/attackby(obj/item/C as obj, mob/user as mob)
 

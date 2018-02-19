@@ -547,14 +547,22 @@
 			if(statpanel("Status"))
 				stat("Location:", "([x], [y], [z]) [loc]")
 				stat("CPU:","[world.cpu]")
+				stat("Tick Usage:", world.tick_usage)
 				stat("Instances:","[world.contents.len]")
 
-			if(statpanel("Processes"))
-				if(processScheduler && processScheduler.getIsRunning())
-					for(var/datum/controller/process/P in processScheduler.processes)
-						stat(P.getStatName(), P.getTickTime())
+			if(statpanel("MC"))
+				if(Master)
+					Master.stat_entry()
 				else
-					stat("processScheduler is not running.")
+					stat("Master Controller:", "ERROR")
+				if(Failsafe)
+					Failsafe.stat_entry()
+				else
+					stat("Failsafe Controller:", "ERROR")
+				if (Master)
+					stat(null, "- Subsystems -")
+					for(var/datum/controller/subsystem/SS in Master.subsystems)
+						SS.stat_entry()
 
 		if(listed_turf && client)
 			if(!TurfAdjacent(listed_turf))
