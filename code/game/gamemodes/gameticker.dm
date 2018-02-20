@@ -169,7 +169,7 @@ var/list/donator_icons
 		//Holiday Round-start stuff	~Carn
 		Holiday_Game_Start()
 
-	processScheduler.start()
+	Master.RoundStart()
 
 	for(var/obj/multiz/ladder/L in world) L.connect() //Lazy hackfix for ladders. TODO: move this to an actual controller. ~ Z
 
@@ -350,7 +350,7 @@ var/list/donator_icons
 				queued_players -= next_in_line
 				queue_delay = 0
 
-	proc/process()
+	process()
 		if(current_state != GAME_STATE_PLAYING)
 			return 0
 
@@ -470,7 +470,7 @@ var/list/donator_icons
 	mode.declare_completion()//To declare normal completion.
 
 	//Ask the event manager to print round end information
-	event_manager.RoundEnd()
+	SSevents.RoundEnd()
 
 	//Print a list of antagonists to the server log
 	var/list/total_antagonists = list()

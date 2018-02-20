@@ -73,7 +73,7 @@
 	if(on)
 		set_light(2, 1, "#FF6A00")
 	else
-		set_light(0)
+		kill_light()
 
 /mob/living/bot/secbot/attack_hand(var/mob/user)
 	user.set_machine(src)

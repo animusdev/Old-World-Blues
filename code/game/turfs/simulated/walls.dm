@@ -31,10 +31,10 @@ var/list/global/wall_cache = list()
 		reinf_material = get_material_by_name(rmaterialtype)
 	update_material()
 
-	processing_turfs |= src
+	START_PROCESSING(SSprocessing, src)
 
 /turf/simulated/wall/Destroy()
-	processing_turfs -= src
+	STOP_PROCESSING(SSprocessing, src)
 	dismantle_wall(null,null,1)
 	..()
 

@@ -1,0 +1,3 @@
+#define MASTER_PLANE 0
+#define GUI_PLANE    MASTER_PLANE + 50
+#define DARK_PLANE   MASTER_PLANE - 50

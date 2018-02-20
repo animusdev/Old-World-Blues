@@ -160,7 +160,7 @@
 
 			if(target.status != LIGHT_EMPTY)
 
-				var/obj/item/weapon/light/L1 = new target.light_type(target.loc)
+				var/obj/item/weapon/light/L1 = new target.bulb_type(target.loc)
 				L1.status = target.status
 				L1.rigged = target.rigged
 				L1.brightness_range = target.brightness_range
@@ -180,7 +180,8 @@
 					else
 						U << "<span class='danger'>\The [src] tries to suck up the broken [target.fitting] but it has no more space. Empty it into the trash!</span>"
 
-			var/obj/item/weapon/light/L2 = new target.light_type()
+			var/obj/item/weapon/light/L2 = new target.bulb_type()
+
 
 			target.status = L2.status
 			target.switchcount = L2.switchcount

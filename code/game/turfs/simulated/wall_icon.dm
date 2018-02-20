@@ -26,7 +26,7 @@
 	if(material.opacity > 0.5 && !opacity)
 		set_light(1)
 	else if(material.opacity < 0.5 && opacity)
-		set_light(0)
+		kill_light()
 
 	update_icon()
 	check_relatives()

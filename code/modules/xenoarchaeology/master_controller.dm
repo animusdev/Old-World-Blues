@@ -1,5 +1,5 @@
 
-/datum/controller/game_controller
+/datum/controller/subsystem/legacy_init
 	var/list/artifact_spawning_turfs = list()
 	var/list/digsite_spawning_turfs = list()
 
@@ -9,11 +9,10 @@
 #define ARTIFACTSPAWNNUM_LOWER 6
 #define ARTIFACTSPAWNNUM_UPPER 12
 
-/datum/controller/game_controller/proc/SetupXenoarch()
+/datum/controller/subsystem/legacy_init/proc/SetupXenoarch()
 	for(var/turf/simulated/mineral/M in world)
 		if(!M.density)
 			continue
-
 		if(isnull(M.geologic_data))
 			M.geologic_data = new /datum/geosample(M)
 

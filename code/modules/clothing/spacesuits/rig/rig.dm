@@ -265,8 +265,8 @@
 						if("helmet")
 							M << "<font color='blue'>\The [piece] hisses [!seal_target ? "closed" : "open"].</font>"
 							M.update_inv_head()
-							if(helmet)
-								helmet.update_light(wearer)
+//							if(helmet)
+//								helmet.update_light(wearer)
 
 					//sealed pieces become airtight, protecting against diseases
 					if (!seal_target)
@@ -478,7 +478,7 @@
 	if(module_list.len)
 		data["modules"] = module_list
 
-	ui = nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
+	ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
 		ui = new(user, src, ui_key, ((src.loc != user) ? ai_interface_path : interface_path), interface_title, 480, 550, state = nano_state)
 		ui.set_initial_data(data)
@@ -649,8 +649,8 @@
 				else
 					H << "<font color='blue'><b>Your [use_obj.name] [use_obj.gender == PLURAL ? "deploy" : "deploys"] swiftly.</b></span>"
 
-	if(piece == "helmet" && helmet)
-		helmet.update_light(H)
+//	if(piece == "helmet" && helmet)
+//		helmet.update_light(H)
 
 /obj/item/weapon/rig/proc/deploy(mob/M,var/sealed)
 

@@ -12,7 +12,7 @@
 		opacity = 0
 		blocks_air = 0
 		thermal_conductivity = 0.040
-		set_light(0)
+		kill_light()
 	else
 		can_open = WALL_OPENING
 		//flick("[material.icon_base]fwall_closing", src)

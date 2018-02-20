@@ -24,7 +24,7 @@
 		set_light(brightness_on)
 	else
 		icon_state = "[initial(icon_state)]"
-		set_light(0)
+		kill_light()
 
 /obj/item/device/pumpkinglamp/attack_self(mob/user)
 	if(!isturf(user.loc))

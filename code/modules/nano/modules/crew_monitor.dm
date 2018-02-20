@@ -8,7 +8,7 @@
 		return 0
 	if(href_list["close"] )
 		var/mob/user = usr
-		var/datum/nanoui/ui = nanomanager.get_open_ui(user, src, "main")
+		var/datum/nanoui/ui = SSnanoui.get_open_ui(user, src, "main")
 		usr.unset_machine()
 		ui.close()
 		return 0
@@ -30,7 +30,7 @@
 	data["isAI"] = isAI(user)
 	data["crewmembers"] = crew_repository.health_data(T)
 
-	ui = nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
+	ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if(!ui)
 		ui = new(user, src, ui_key, "crew_monitor.tmpl", "Crew Monitoring Computer", 900, 800, state = state)
 
